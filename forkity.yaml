@@ -120,7 +120,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: forkity-backend:local
+          image: itaylevops/forkity:backend-V.0.13
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
