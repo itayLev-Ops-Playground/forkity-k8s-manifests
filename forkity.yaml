@@ -194,7 +194,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: forkity-frontend:local
+          image: forkity:frontend-placeholder
           imagePullPolicy: IfNotPresent
           ports:
             - name: http

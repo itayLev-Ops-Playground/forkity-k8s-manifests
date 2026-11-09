@@ -39,10 +39,15 @@ spec:
                 secretKeyRef:
                   name: forkity-db
                   key: POSTGRES_USER
-            - name: PGPASSWORD
+            # - name: PGPASSWORD
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: forkity-db
+            #       key: POSTGRES_PASSWORD
+            - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: forkity-db
+                  name: db-secret
                   key: POSTGRES_PASSWORD
           startupProbe:
             tcpSocket:
