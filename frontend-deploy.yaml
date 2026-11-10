@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: itaylevops/forkity:frontend-placeholder
+          image: itaylevops/forkity:frontend-V.0.13
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
