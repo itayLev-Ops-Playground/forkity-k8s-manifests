@@ -61,15 +61,11 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /var/lib/postgresql/data
-          volumes:
-            - name: data
-              hostPath:
-              path: /mnt/data/postgres  # Stores data statically on your AWS worker node disk
-              type: DirectoryOrCreate
   volumeClaimTemplates:
     - metadata:
         name: data
       spec:
+        storageClassName: local-storage
         accessModes:
           - ReadWriteOnce
         resources:
