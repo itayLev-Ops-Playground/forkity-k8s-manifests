@@ -31,15 +31,10 @@ spec:
                 secretKeyRef:
                   name: forkity-db
                   key: POSTGRES_USER
-            # - name: POSTGRES_PASSWORD
-            #   valueFrom:
-            #     secretKeyRef:
-            #       name: forkity-db
-            #       key: POSTGRES_PASSWORD
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: db-secret
+                  name: forkity-db
                   key: POSTGRES_PASSWORD
           startupProbe:
             exec:
@@ -66,6 +61,11 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /var/lib/postgresql/data
+          volumes:
+            - name: postgres-storage
+              hostPath:
+              path: /mnt/data/postgres  # Stores data statically on your AWS worker node disk
+              type: DirectoryOrCreate
   volumeClaimTemplates:
     - metadata:
         name: data
