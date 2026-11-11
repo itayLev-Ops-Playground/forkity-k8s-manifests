@@ -10,7 +10,6 @@ spec:
   #   - hodi.local
   #   secretName: tls-secrets
   rules:
-  - host: 3.95.181.15
     http:
       paths:
       - pathType: Prefix
