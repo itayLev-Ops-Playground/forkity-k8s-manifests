@@ -16,7 +16,7 @@ spec:
     required:
       nodeSelectorTerms:
         - matchExpressions:
-            - key: kubernetes.io/hostname
+            - key: forkity.local/storage
               operator: In
               values:
-                - k8s-master
+                - db
