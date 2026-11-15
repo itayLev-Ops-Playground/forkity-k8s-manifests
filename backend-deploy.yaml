@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: itaylevops/forkity:backend-V.0.48
+          image: itaylevops/forkity:backend-V.0.50
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
