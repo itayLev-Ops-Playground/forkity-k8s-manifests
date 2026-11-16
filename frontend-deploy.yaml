@@ -4,7 +4,7 @@ metadata:
   name: frontend
   namespace: app
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app.kubernetes.io/name: frontend
@@ -15,7 +15,11 @@ spec:
     spec:
       containers:
         - name: frontend
+<<<<<<< HEAD
           image: itaylevops/forkity:frontend-V.0.62
+=======
+          image: itaylevops/forkity:frontend-V.0.31
+>>>>>>> 1880646 (Update: number of replicas for improved redandency)
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
