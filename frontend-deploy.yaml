@@ -16,9 +16,9 @@ spec:
       containers:
         - name: frontend
 <<<<<<< HEAD
-          image: itaylevops/forkity:frontend-V.0.62
+          image: itaylevops/forkity:frontend-V.0.63
 =======
-          image: itaylevops/forkity:frontend-V.0.31
+          image: itaylevops/forkity:frontend-V.0.63
 >>>>>>> 1880646 (Update: number of replicas for improved redandency)
           imagePullPolicy: IfNotPresent
           ports:
